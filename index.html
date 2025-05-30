@@ -21,17 +21,30 @@
                 <li><a href="#login">Login</a></li>
             </ul>
             <script>
-            const links = document.querySelectorAll('.nav-links a');
+                const navLinks = document.querySelectorAll('.nav-links li a');
 
-            links.forEach(link => {
+                navLinks.forEach(link => {
+                    let animationId;
+                    let position = 0;
+
+                    function animate() {
+                        position += 1;
+                        if (position > 600) position = 0;
+                        link.style.backgroundPosition = `${position}% 50%`;
+                        animationId = requestAnimationFrame(animate);
+      }
+
                 link.addEventListener('mouseenter', () => {
-                    link.classList.add('hovered');
-      });
+                    animationId = requestAnimationFrame(animate);
+                });
 
-            link.addEventListener('mouseleave', () => {
-                link.classList.remove('hovered');
-      });
-    });
+                link.addEventListener('mouseleave', () => {
+                    cancelAnimationFrame(animationId);
+                    position = 0;
+                    link.style.backgroundPosition = `0% 50%`;
+                });
+            });
+            </script>
         </script>
         </nav>
         
