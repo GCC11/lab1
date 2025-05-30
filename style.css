@@ -42,9 +42,9 @@ body {
     gap: 20px;
 }
 
-.nav-links li {
+/*.nav-links li {
     display: inline;
-}
+}*/
 
 .nav-links li a {
     padding: 10px 20px;
