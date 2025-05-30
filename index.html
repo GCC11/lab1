@@ -12,7 +12,7 @@
         <nav class="navbar">
             <a href="#home" class="logo">
                 <img src="logo.jpg" alt="C&A Motorcycle Shop Logo">
-                <span class="company-name">C&Aa MOTORCYCLE SHOP</span>
+                <span class="company-name">C&A MOTORCYCLE SHOP</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -21,6 +21,22 @@
                 <li><a href="#login">Login</a></li>
             </ul>
         </nav>
+        <script>
+            const links = document.querySelectorAll('.nav-links a');
+
+            links.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    link.style.transition = 'all 0.2s ease';
+                    link.style.transform = 'scale(1.1)';
+                    link.style.color = '#ffcc00';
+      });
+
+            link.addEventListener('mouseleave', () => {
+                    link.style.transform = 'scale(1)';
+                    link.style.color = 'white';
+      });
+    });
+  </script>
     </header>
 
     <div id="home" class="content">
