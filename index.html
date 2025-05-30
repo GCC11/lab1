@@ -21,21 +21,7 @@
                 <li><a href="#login">Login</a></li>
             </ul>
         </nav>
-        <script>
-            const links = document.querySelectorAll('.nav-links a');
-
-            links.forEach(link => {
-                link.addEventListener('mouseenter', () => {
-                    link.style.transition = 'all 0.2s ease';
-                    link.style.transform = 'scale(1.1)';
-                    link.style.color = '#ffcc00';
-      });
-
-            link.addEventListener('mouseleave', () => {
-                    link.style.transform = 'scale(1)';
-                    link.style.color = 'white';
-      });
-    });
+        
   </script>
     </header>
 
@@ -65,7 +51,24 @@
             <li><b>Nationwide Delivery</b> - Get your motorcycle delivered straight to your home.</li>
             <li><b>Simple & Secure Purchase</b> - A seamless buying experience with trusted payment options.</li>
             <li><b>Expert Guidance</b> - Our team is here to help you choose the perfect ride.</li>
-        </ul>    
+        </ul>   
+        <button class="btn" id="myBtn">Hover Me</button>
+
+        <script>
+            const button = document.getElementById('myBtn');
+
+            button.addEventListener('mouseenter', () => {
+                button.style.backgroundColor = '#45a049';
+                button.style.transform = 'scale(1.05)';
+                button.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
+    });
+
+            button.addEventListener('mouseleave', () => {
+                button.style.backgroundColor = '#4CAF50';
+                button.style.transform = 'scale(1)';
+                button.style.boxShadow = 'none';
+    });
+  </script>
     </div>
 
 <div id="product" class="hide-prod">
