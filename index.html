@@ -20,6 +20,17 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#login">Login</a></li>
             </ul>
+            <script>
+            const links = document.querySelectorAll('.nav-links a');
+
+            links.addEventListener('mouseenter', () => {
+                 links.classList.add('hovered');
+  });
+
+            links.addEventListener('mouseleave', () => {
+                links.classList.remove('hovered');
+  });
+        </script>
         </nav>
         
   </script>
