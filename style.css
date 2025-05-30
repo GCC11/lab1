@@ -51,8 +51,13 @@ body {
     color: white;
     font-size: 18px;
     font-weight: bold;
-    transition: 0.3s;
+    display: inline-block;
+
 }
+.nav-links a.hovered {
+      transform: scale(1.1);
+      color: #ffcc00;
+    }
 
 .nav-links a:hover {
     color: #e72300;
