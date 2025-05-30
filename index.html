@@ -23,13 +23,15 @@
             <script>
             const links = document.querySelectorAll('.nav-links a');
 
-            links.addEventListener('mouseenter', () => {
-                 links.classList.add('hovered');
-  });
+            links.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    link.classList.add('hovered');
+      });
 
-            links.addEventListener('mouseleave', () => {
-                links.classList.remove('hovered');
-  });
+            link.addEventListener('mouseleave', () => {
+                link.classList.remove('hovered');
+      });
+    });
         </script>
         </nav>
         
