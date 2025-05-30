@@ -1,0 +1,252 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: white;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222222;
+    padding: 15px 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.company-name {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e72300;
+}
+
+/* Content Sections */
+.content {
+    padding: 50px;
+    padding-bottom: 30px;
+    display: none;
+}
+.content p {
+    padding-bottom: 30px;
+}
+
+/* Display the target section */
+.content:target {
+    display: block;
+}
+
+/* Default to show the home section if no target is specified */
+body:not(:has(:target)) #home {
+    display: block;
+}
+
+/* Typography */
+h1 {
+    font-size: 6ch;
+}
+
+h2 {
+    font-size: 4ch;
+}
+
+p, ul {
+    font-size: 3ch;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.float-right {
+    float: right;
+    width: 450px;
+    height: 400px;
+    margin-left: 20px;
+}
+
+.float-left {
+    float: left;
+    width: 500px;
+    height: 350px;
+    margin-right: 30px;
+}
+.space {
+    margin-bottom: 50px;
+}
+.main{
+    display:grid
+    
+}
+.nav-products{
+    display: none;
+    text-align: center;/*para sa nav pprod naka center*/
+    
+}
+.nav-products a{
+    color: black;
+    list-style:none;
+    text-decoration: none;
+   
+} 
+.nav-products li{
+    padding-top: 10px;
+    display: inline;
+       
+}
+.nav-products a:hover{
+    color: #e72300;
+}
+
+.hide-prod{
+    display: none;
+}
+/*.hide-prod:target,.nav-products{
+    display: block ;
+
+}*/.hide-prod:target
+.hide-prod p{
+    padding-bottom: 30px;
+}
+.hide-prod li{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.honda-p:target{
+    display: block;
+}
+
+#honda, #kawasaki, #yamaha {
+    display: none;
+}
+#honda:target,#kawasaki:target,#yamaha:target{
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers vertically (if needed) */
+    width: 100%;; /* Makes the div only as wide as its content */
+    height: 130px;/* adjust dito kung mag ooverlap */
+    padding: 20px;
+    margin: auto; /* Ensures the div is centered */
+}
+.hide-prod:target,#honda:target, #kawasaki:target, #yamaha:target{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+#honda th, #honda td,#kawasaki th,#kawasaki td,#yamaha th,#yamaha td {
+    border: solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    width: 1000px;
+   
+}
+
+#honda table td:nth-child(4),td:nth-child(3),#kawasaki table td:nth-child(4),td:nth-child(3),#yamaha table td:nth-child(4),td:nth-child(3){
+    text-align: left;
+}
+
+#honda table,#kawasaki table,#yamaha table{
+    padding: 50%;
+    border-collapse: collapse;
+    
+}
+.size_li li{
+    font-size: 14px;
+    display: block;
+    font-family: 'Arial';
+  
+    list-style-position:inside;
+}.size_pre {
+    font-size: 20px;
+
+}
+.highlight{
+    font-weight: bold;
+    font-size: 20px;   
+}
+.about{
+    display: none;
+    text-align: center;
+}
+.about:target {
+    display: block;
+}
+.about img{
+    width: 50ch;
+    height: 30ch;
+}
+  
+#product:target #nav-prod,
+#honda:target ~ .nav-products,
+#kawasaki:target ~ .nav-products,
+#yamaha:target ~ .nav-products,
+#honda:target #nav-prod1,
+#kawasaki:target #nav-prod1,
+#yamaha:target #nav-prod1  {
+    display: block;
+    color: black;
+    list-style:none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+ 
+}
+#honda:target #nav-prod1 li,
+#yamaha:target #nav-prod1 li,
+#kawasaki:target #nav-prod1 li
+{
+    font-size: larger;
+}
+#hover-image:hover{
+
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+    
+}
