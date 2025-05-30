@@ -58,16 +58,12 @@
             const button = document.getElementById('myBtn');
 
             button.addEventListener('mouseenter', () => {
-                button.style.backgroundColor = '#45a049';
-                button.style.transform = 'scale(1.05)';
-                button.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
-    });
+                 button.classList.add('hovered');
+  });
 
             button.addEventListener('mouseleave', () => {
-                button.style.backgroundColor = '#000000';
-                button.style.transform = 'scale(1)';
-                button.style.boxShadow = 'none';
-    });
+                button.classList.remove('hovered');
+  });
         </script>
     </div>
 
